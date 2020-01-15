@@ -1,0 +1,69 @@
+<script language="JavaScript">
+function tambah(form) {
+ a=eval(form.a.value)
+ b=eval(form.b.value)
+ c=a+b
+ form.hasil.value = c
+}
+function kurang(form) {
+ a=eval(form.a.value)
+ b=eval(form.b.value)
+ c=a-b
+ form.hasil.value=c
+}
+function kali(form) {
+ a=eval(form.a.value)
+ b=eval(form.b.value)
+ c=a*b
+ form.hasil.value=c
+}
+function bagi(form) {
+ a=eval(form.a.value)
+ b=eval(form.b.value)
+ c=a/b
+ form.hasil.value = c
+}
+</script>
+
+<script type="text/javascript">
+    function eraseText() {
+     document.getElementById("angka1").value = "";
+     document.getElementById("angka2").value = "";
+     document.getElementById("hasil").value = "";
+	}
+</script>
+
+<form name="formx"> 
+<table cellpadding="5" cellspacing="5">
+  <tr>
+    <td height="30">Angka Pertama</td>
+    <td>:</td>
+    <td><input type=text size=4  autocomplete="off" id="angka1" <input type="checkbox"= name="a"><br></td>
+  </tr>
+  <tr>
+    <td height="30">Angka Kedua</td>
+    <td>:</td>
+    <td><input size=4 name="b" id="angka2"></td>
+  </tr>
+  <!--<tr>
+    <td height="30">Angka Ketiga</td>
+    <td>:</td>
+    <td><input type="number" size=4 value=3 name="b"></td>
+  </tr>-->
+
+
+<tr>
+<td colspan="3" height="30"><input type="button" value="  +  " onClick="tambah(this.form)">  
+<input type="button" value="  -  " onClick="kurang(this.form)">  
+<input type="button" value="  x  " onClick="kali(this.form)" >  
+<input type="button" value="  /  " onClick="bagi(this.form)" > 
+<input type="button" value="Clear" onclick="javascript:eraseText();"> 
+  </td>
+  </tr>
+   <tr>
+    <td height="30">Hasil</td>
+    <td>:</td>
+    <td><input name="hasil" size=9 id="hasil"></td>
+  </tr>
+</table>
+</form>
