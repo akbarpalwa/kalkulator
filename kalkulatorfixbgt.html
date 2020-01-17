@@ -1,0 +1,76 @@
+<script language="JavaScript">
+function tambah(form) {
+ a=eval(document.getElementById("angka1").value)
+ b=eval(document.getElementById("angka2").value)
+ c=eval(document.getElementById("angka3").value)
+ d=a+b+c
+ form.hasil.value = d
+}
+function kurang(form) {
+ a=eval(document.getElementById("angka1").value)
+ b=eval(document.getElementById("angka2").value)
+ c=eval(document.getElementById("angka3").value)
+ d=a-b-c
+ form.hasil.value=d
+}
+function kali(form) {
+ a=eval(document.getElementById("angka1").value)
+ b=eval(document.getElementById("angka2").value)
+ c=eval(document.getElementById("angka3").value)
+ d=a*b*c
+ form.hasil.value=d
+}
+function bagi(form) {
+ a=eval(document.getElementById("angka1").value)
+ b=eval(document.getElementById("angka2").value)
+ d=eval(document.getElementById("angka3").value)
+ d=a/b/c
+ form.hasil.value = d
+}
+</script>
+
+<script type="text/javascript">
+    function eraseText() {
+     document.getElementById("angka1").value = "";
+     document.getElementById("angka2").value = "";
+     document.getElementById("angka3").value = "";
+     document.getElementById("hasil").value = "";
+	}
+</script>
+
+<center>
+<form name="form" style="width: 50%; margin: auto;"> 
+<table cellpadding="5" cellspacing="5">
+  <tr>
+    <td height="30">Angka Pertama</td>
+    <td>:</td>
+    <td><input type="text" size=4 name="a" id="angka1"><input type="checkbox"= name="a"><br></td>
+  </tr>
+  <tr>
+    <td height="30">Angka Kedua</td>
+    <td>:</td>
+    <td><input type="text" size=4 name="b" id="angka2"><input type="checkbox"= name="a"></td>
+  </tr>
+  <tr>
+    <td height="30">Angka Ketiga</td>
+    <td>:</td>
+    <td><input type="text" size="4" name="c" id="angka3"><input type="checkbox"= name="a"></td>
+  </tr>
+
+
+<tr>
+<td colspan="3" height="30"><input type="button" value="  +  " onClick="tambah(this.form)">  
+<input type="button" value="  -  " onClick="kurang(this.form)">  
+<input type="button" value="  x  " onClick="kali(this.form)" >  
+<input type="button" value="  /  " onClick="bagi(this.form)" > 
+<input type="button" value="Clear" onclick="javascript:eraseText();"> 
+  </td>
+  </tr>
+   <tr>
+    <td height="30">Hasil</td>
+    <td>:</td>
+    <td><input name="hasil" size=9 id="hasil"></td>
+  </tr>
+</table>
+</form>
+</center>
